@@ -76,6 +76,23 @@
 
         .back-link:hover {
             color: var(--gold);
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #dce3ee;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
         }
 
         .hero {
@@ -255,12 +272,20 @@
             .product-display {
                 padding: 25px;
             }
+            .nav-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    font-size: 12px;
+}
         }
     </style>
 </head>
 
 <body>
-
 <header>
     <div class="container">
         <nav>
@@ -268,12 +293,16 @@
                 BGSoft <span>Studio</span>
             </a>
 
-            <a href="index.html" class="back-link">
-                ← Kembali ke Beranda
-            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </div>
 </header>
+
 
 <main>
 
@@ -286,25 +315,17 @@
                 HEIC2JPG <span>Pro</span>
             </h1>
 
-            <p>
-                ### HEIC2JPG Pro — Product Information
-            HEIC2JPG Pro merupakan aplikasi desktop Windows yang dirancang untuk membantu pengguna mengonversi gambar berformat HEIC menjadi JPG melalui antarmuka yang sederhana dan praktis.
-            Halaman produk ini menyediakan informasi lengkap mengenai kemampuan aplikasi, tampilan antarmuka, spesifikasi sistem, dan informasi versi.
-            **Product Information**
-            - Product Name: HEIC2JPG Pro
-            - Developer: BGSoft Studio
-            - Platform: Windows Desktop
-            - Main Function: HEIC to JPG Conversion
-            - Application Type: Desktop Software
-            **Product Details**
-            - Application screenshots
-            - Key features and capabilities
-            - System requirements
-            - Version information
-            - Installation information
-            - Release status
-            BGSoft Studio berkomitmen untuk memastikan setiap informasi produk disajikan secara jelas sebelum aplikasi tersedia untuk publik.
-            </p>
+            
+<p>
+    HEIC2JPG Pro is a Windows desktop application
+    designed to help users convert HEIC image files
+    into the widely supported JPG format.
+
+    With a simple interface and practical features,
+    the application makes everyday image conversion
+    more convenient.
+</p>
+
 
             <div class="product-display">
                 <strong>HEIC</strong>
