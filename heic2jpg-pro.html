@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HEIC2JPG Pro | BGSoft Studio</title>
+
+    <meta name="description" content="Kenali HEIC2JPG Pro, aplikasi Windows untuk mengonversi gambar HEIC menjadi JPG dengan alur kerja yang praktis.">
+
+    <style>
+        :root {
+            --navy: #101d35;
+            --navy-light: #192b49;
+            --gold: #d8b56d;
+            --white: #ffffff;
+            --background: #f5f7fb;
+            --text: #26344a;
+            --muted: #778397;
+            --border: #e6eaf0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        header {
+            background: var(--navy);
+            color: white;
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .brand span {
+            color: var(--gold);
+        }
+
+        .back-link {
+            color: #dce3ee;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 80% 20%, #263d61, transparent 38%),
+                linear-gradient(120deg, #101d35, #192b49);
+            color: white;
+            padding: 85px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid rgba(216,181,109,.5);
+            border-radius: 30px;
+            padding: 5px 13px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 58px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #c4cfde;
+            font-size: 17px;
+        }
+
+        .product-display {
+            margin-top: 40px;
+            max-width: 520px;
+            padding: 35px;
+            border: 1px solid rgba(216,181,109,.4);
+            border-radius: 12px;
+            background: linear-gradient(145deg, #233a5c, #14243e);
+            text-align: center;
+        }
+
+        .product-display strong {
+            display: block;
+            color: var(--gold);
+            font-size: 48px;
+            line-height: 1.2;
+        }
+
+        .product-display span {
+            color: #c4cfde;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        .section {
+            padding: 75px 0;
+        }
+
+        .section.gray {
+            background: var(--background);
+        }
+
+        .label {
+            color: #a27c35;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: clamp(27px, 4vw, 36px);
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .description {
+            max-width: 720px;
+            color: var(--muted);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .feature {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .feature h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #f7f0e2;
+            color: #8c682b;
+            border-radius: 5px;
+            padding: 7px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 22px;
+        }
+
+        .cta {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .cta p {
+            color: #c4cfde;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            background: #f0d9a5;
+        }
+
+        footer {
+            background: #0b1528;
+            color: #aeb9c9;
+            padding: 23px 0;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .product-display {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="brand">
+                BGSoft <span>Studio</span>
+            </a>
+
+            <a href="index.html" class="back-link">
+                ← Kembali ke Beranda
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+
+            <div class="tag">WINDOWS DESKTOP APPLICATION</div>
+
+            <h1>
+                HEIC2JPG <span>Pro</span>
+            </h1>
+
+            <p>
+                A practical Windows desktop application
+                designed to convert HEIC images into JPG
+                through a simple and convenient workflow.
+            </p>
+
+            <div class="product-display">
+                <strong>HEIC</strong>
+                <span>CONVERT TO</span>
+                <strong>JPG</strong>
+                <span>BY BGSOFT STUDIO</span>
+            </div>
+
+            <div class="status">
+                RELEASE PREPARATION
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="label">About the Product</div>
+
+            <h2>Convert Images More Conveniently</h2>
+
+            <p class="description">
+                HEIC2JPG Pro is being developed to help
+                Windows users work with HEIC image files
+                and convert them into the familiar JPG format.
+
+                The application focuses on a straightforward
+                interface and practical image-conversion tools.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="section gray">
+        <div class="container">
+
+            <div class="label">Key Features</div>
+
+            <h2>Designed for Everyday Work</h2>
+
+            <div class="feature-grid">
+
+                <article class="feature">
+                    <h3>HEIC to JPG Conversion</h3>
+                    <p>
+                        Convert supported HEIC images
+                        into JPG format.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <h3>Drag and Drop</h3>
+                    <p>
+                        Add image files through a convenient
+                        drag-and-drop workflow.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <h3>Image Preview</h3>
+                    <p>
+                        Preview images within the application
+                        before processing.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <h3>Metadata Handling</h3>
+                    <p>
+                        Includes metadata-related handling
+                        during the conversion workflow.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="label">Product Information</div>
+
+            <h2>Application Details</h2>
+
+            <div class="feature-grid">
+
+                <article class="feature">
+                    <h3>Platform</h3>
+                    <p>Windows desktop application.</p>
+                </article>
+
+                <article class="feature">
+                    <h3>Product Type</h3>
+                    <p>Image conversion utility.</p>
+                </article>
+
+                <article class="feature">
+                    <h3>Developer</h3>
+                    <p>BGSoft Studio.</p>
+                </article>
+
+                <article class="feature">
+                    <h3>Availability</h3>
+                    <p>Release preparation. Public release details will be announced later.</p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+
+            <h2>More Practical Software</h2>
+
+            <p>
+                Discover projects and updates from BGSoft Studio.
+            </p>
+
+            <a
+                href="https://github.com/BGSoftStudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
+                Visit GitHub
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <strong>BGSoft Studio</strong>
+        — Smart Software. Simple Solutions.
+        <br>
+        © <span id="year"></span> BGSoft Studio. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
