@@ -282,6 +282,74 @@
     font-size: 12px;
 }
         }
+
+.screenshot-section {
+    padding: 80px 0;
+    background: #f5f7fb;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.section-heading .eyebrow {
+    color: #b58b38;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #10213d;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.screenshot-gallery {
+    max-width: 1000px;
+    margin: auto;
+    padding: 12px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(15, 35, 65, 0.10);
+}
+
+.main-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+
+.screenshot-caption {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+@media (max-width: 650px) {
+    .screenshot-section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .screenshot-gallery {
+        padding: 6px;
+    }
+}
+
     </style>
 </head>
 
@@ -340,6 +408,32 @@
 
         </div>
     </section>
+
+<section class="screenshot-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">APPLICATION PREVIEW</span>
+            <h2>See HEIC2JPG Pro in Action</h2>
+            <p>
+                Explore the interface and discover a simple
+                way to convert HEIC images into JPG.
+            </p>
+        </div>
+
+        <div class="screenshot-gallery">
+            <img
+                src="assets/heic2jpg-main.png"
+                alt="HEIC2JPG Pro main application interface"
+                class="main-screenshot"
+            >
+        </div>
+
+        <p class="screenshot-caption">
+            HEIC2JPG Pro — Main Application Interface
+        </p>
+    </div>
+</section>
+
 
     <section class="section">
         <div class="container">
