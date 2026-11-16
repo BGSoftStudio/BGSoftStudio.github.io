@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | BGSoft Studio</title>
+    <meta name="description" content="Explore practical desktop software and digital solutions developed by BGSoft Studio.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8fc;
+            color: #17243b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #07152b;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d9b76e;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #d9b76e;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #07152b, #142d50);
+            color: white;
+            text-align: center;
+            padding: 95px 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #d9b76e;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #d5ddec;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 75px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #0b1c36;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #667085;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #e6eaf0;
+            box-shadow: 0 8px 25px rgba(10, 30, 60, 0.06);
+            transition: 0.25s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(10, 30, 60, 0.12);
+        }
+
+        .product-image {
+            background: #e9edf4;
+            min-height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-content h3 {
+            font-size: 22px;
+            color: #0b1c36;
+            margin-bottom: 10px;
+        }
+
+        .product-content p {
+            color: #667085;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #fff4d9;
+            color: #8b641b;
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0b1c36;
+            color: white;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #c6a45e;
+            color: #07152b;
+        }
+
+        .coming {
+            border: 1px dashed #cbd3df;
+            background: #fbfcfe;
+        }
+
+        .cta {
+            background: #eaf0f8;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .cta h2 {
+            color: #0b1c36;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            color: #667085;
+            margin-bottom: 22px;
+        }
+
+        footer {
+            background: #07152b;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #d9b76e;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BGSoft <span>Studio</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Our <span>Products</span></h1>
+    <p>
+        Explore practical software solutions designed
+        to make everyday digital tasks simpler,
+        easier, and more efficient.
+    </p>
+</section>
+
+<main class="container">
+
+    <div class="section-title">
+        <h2>Software Collection</h2>
+        <p>Discover applications developed by BGSoft Studio.</p>
+    </div>
+
+    <div class="products">
+
+        <article class="product-card">
+            <div class="product-image">
+                <div>
+                    <strong>HEIC2JPG Pro</strong>
+                    <br>
+                    Windows Desktop Application
+                </div>
+            </div>
+
+            <div class="product-content">
+                <span class="status">Release Preparation</span>
+
+                <h3>HEIC2JPG Pro</h3>
+
+                <p>
+                    A practical Windows desktop application
+                    designed to convert HEIC images into
+                    JPG format through a simple interface.
+                </p>
+
+                <a href="heic2jpg-pro.html" class="button">
+                    View Product Details
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card coming">
+            <div class="product-image">
+                <div>
+                    <strong>More Software</strong>
+                    <br>
+                    Coming Soon
+                </div>
+            </div>
+
+            <div class="product-content">
+                <span class="status">In Development</span>
+
+                <h3>More Solutions</h3>
+
+                <p>
+                    BGSoft Studio continues to explore
+                    and develop practical software
+                    solutions for different user needs.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+</main>
+
+<section class="cta">
+    <h2>Looking for a Practical Software Solution?</h2>
+
+    <p>
+        Get in touch with BGSoft Studio for product
+        information and inquiries.
+    </p>
+
+    <a href="contact.html" class="button">
+        Contact Us
+    </a>
+</section>
+
+<footer>
+    <p>
+        © <span id="year"></span>
+        <strong>BGSoft Studio</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>Smart Software. Simple Solutions.</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
