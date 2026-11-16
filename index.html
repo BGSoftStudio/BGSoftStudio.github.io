@@ -4,11 +4,716 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BGSoft Studio</title>
+
+    <title>BGSoft Studio | Smart Software. Simple Solutions.</title>
+
+    <meta name="description" content="BGSoft Studio mengembangkan aplikasi desktop Windows dan solusi digital yang praktis, sederhana, dan mudah digunakan.">
+
+    <meta name="theme-color" content="#101d35">
+
+    <style>
+        :root {
+            --navy: #101d35;
+            --navy-light: #192b49;
+            --gold: #d8b56d;
+            --gold-light: #f0d9a5;
+            --white: #ffffff;
+            --background: #f5f7fb;
+            --text: #26344a;
+            --muted: #778397;
+            --border: #e6eaf0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: var(--navy);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .brand-name {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: .4px;
+        }
+
+        .brand-name span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+            font-size: 14px;
+            color: #dce3ee;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-button {
+            border: 1px solid var(--gold);
+            padding: 9px 18px;
+            border-radius: 6px;
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 0;
+            color: white;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                radial-gradient(circle at 80% 20%, #263d61 0, transparent 35%),
+                linear-gradient(120deg, #101d35, #172b49);
+            color: var(--white);
+            padding: 110px 0 120px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 66px);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            max-width: 620px;
+            color: #c5cfde;
+            font-size: 17px;
+            margin-bottom: 34px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 6px;
+            font-weight: 650;
+            font-size: 14px;
+            transition: .2s;
+        }
+
+        .button-gold {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .button-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid #71819a;
+            color: white;
+        }
+
+        .button-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* INTRO */
+
+        .intro {
+            padding: 85px 0;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .section-label {
+            color: #a27c35;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 39px);
+            color: var(--navy);
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            max-width: 680px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        /* VALUES */
+
+        .values {
+            padding: 75px 0;
+            background: var(--background);
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 9px;
+            display: grid;
+            place-items: center;
+            background: #f7f0e2;
+            color: #98712c;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .value-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* PRODUCT */
+
+        .products {
+            padding: 90px 0;
+            background: white;
+        }
+
+        .product-card {
+            margin-top: 38px;
+            background: var(--navy);
+            color: white;
+            border-radius: 14px;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .product-tag {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid rgba(216,181,109,.5);
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .product-card h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            color: #c4cfde;
+            margin-bottom: 22px;
+        }
+
+        .product-features {
+            list-style: none;
+            display: grid;
+            gap: 9px;
+            color: #e2e8f0;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .product-features li::before {
+            content: "✓";
+            color: var(--gold);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .product-visual {
+            min-height: 250px;
+            border: 1px solid rgba(216,181,109,.35);
+            border-radius: 12px;
+            background: linear-gradient(145deg, #233a5c, #14243e);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .product-visual strong {
+            font-size: 45px;
+            color: var(--gold);
+            letter-spacing: -2px;
+        }
+
+        .product-visual span {
+            color: #c4cfde;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            padding: 85px 0;
+            background: var(--background);
+        }
+
+        .about-content {
+            max-width: 760px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-top: 18px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            padding: 85px 0;
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            color: #c4cfde;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1528;
+            color: #aeb9c9;
+            padding: 25px 0;
+            font-size: 12px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-content strong {
+            color: var(--gold);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 760px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                padding: 22px 5%;
+                background: var(--navy);
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 80px 0 90px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                grid-template-columns: 1fr;
+                padding: 30px 23px;
+            }
+
+            .product-card h3 {
+                font-size: 27px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>BGSoft Studio</h1>
-    <p>Smart Software. Simple Solutions.</p>
-    <p>Official website is under construction.</p>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="brand">
+                    <div class="brand-icon">BG</div>
+                    <div class="brand-name">BGSoft <span>Studio</span></div>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle"
+                        aria-label="Buka menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact" class="nav-button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="eyebrow">Software & Digital Solutions</div>
+
+                    <h1>
+                        Smart Software.<br>
+                        <span>Simple Solutions.</span>
+                    </h1>
+
+                    <p>
+                        We create practical desktop applications and
+                        digital solutions designed to make everyday
+                        work simpler, more efficient, and accessible.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#products" class="button button-gold">
+                            Explore Products
+                        </a>
+
+                        <a href="#about" class="button button-outline">
+                            About BGSoft Studio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="intro">
+            <div class="container">
+                <div class="section-label">Welcome to BGSoft Studio</div>
+
+                <h2 class="section-title">
+                    Technology Made Practical
+                </h2>
+
+                <p class="section-description">
+                    Our focus is creating useful software with
+                    straightforward features, clean interfaces,
+                    and a comfortable user experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="values">
+            <div class="container">
+                <div class="section-label">Our Approach</div>
+
+                <h2 class="section-title">
+                    Simple Ideas. Useful Software.
+                </h2>
+
+                <div class="value-grid">
+                    <article class="value-card">
+                        <div class="value-icon">◇</div>
+                        <h3>Practical</h3>
+                        <p>
+                            Applications designed around real tasks
+                            and everyday user needs.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon">▣</div>
+                        <h3>Simple</h3>
+                        <p>
+                            Clear interfaces and focused features
+                            without unnecessary complexity.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon">✦</div>
+                        <h3>Reliable</h3>
+                        <p>
+                            We aim to build useful tools that are
+                            carefully tested and continuously improved.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section-label">Our Products</div>
+
+                <h2 class="section-title">
+                    Software from BGSoft Studio
+                </h2>
+
+                <p class="section-description">
+                    Explore our desktop software projects.
+                    More practical tools are planned for the future.
+                </p>
+
+                <article class="product-card">
+                    <div>
+                        <div class="product-tag">
+                            FIRST PRODUCT · WINDOWS
+                        </div>
+
+                        <h3>HEIC2JPG Pro</h3>
+
+                        <p>
+                            A Windows desktop application designed
+                            to help users convert HEIC image files
+                            into the widely supported JPG format.
+                        </p>
+
+                        <ul class="product-features">
+                            <li>HEIC to JPG conversion</li>
+                            <li>Drag and drop workflow</li>
+                            <li>Image preview</li>
+                            <li>Metadata handling</li>
+                        </ul>
+
+                        <span class="button button-gold">
+                            Release Preparation
+                        </span>
+                    </div>
+
+                    <div class="product-visual">
+                        <strong>HEIC</strong>
+                        <span>TO</span>
+                        <strong>JPG</strong>
+                        <span>IMAGE CONVERTER</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="section-label">About Us</div>
+
+                    <h2 class="section-title">
+                        About BGSoft Studio
+                    </h2>
+
+                    <p>
+                        BGSoft Studio is an independent software
+                        development studio focused on practical
+                        Windows desktop applications and digital
+                        solutions.
+                    </p>
+
+                    <p>
+                        Our goal is to make technology easier to use
+                        through thoughtful design, useful features,
+                        and straightforward software experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-label">Get in Touch</div>
+
+                <h2 class="section-title">
+                    Let's Connect
+                </h2>
+
+                <p>
+                    Follow BGSoft Studio on GitHub to see our
+                    software projects and future updates.
+                </p>
+
+                <a
+                    href="https://github.com/BGSoftStudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-gold">
+                    Visit Our GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <strong>BGSoft Studio</strong>
+                — Smart Software. Simple Solutions.
+            </div>
+
+            <div>
+                © <span id="year"></span> BGSoft Studio.
+                All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("active");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
 </body>
 </html>
