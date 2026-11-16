@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | BGSoft Studio</title>
+    <meta name="description" content="Learn about BGSoft Studio, our vision, mission, and commitment to developing practical software solutions.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8fc;
+            color: #17243b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #07152b;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d9b76e;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #d9b76e;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #07152b, #142d50);
+            color: white;
+            text-align: center;
+            padding: 95px 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #d9b76e;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: auto;
+            color: #d5ddec;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 75px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            color: #0b1c36;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            color: #667085;
+            margin-bottom: 16px;
+        }
+
+        .tagline {
+            color: #b38a3e;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 55px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 1px solid #e6eaf0;
+            box-shadow: 0 8px 25px rgba(10, 30, 60, 0.05);
+        }
+
+        .value-card h3 {
+            color: #0b1c36;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        .mission {
+            background: #eaf0f8;
+            padding: 60px 20px;
+        }
+
+        .mission-inner {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .mission h2 {
+            color: #0b1c36;
+            margin-bottom: 18px;
+            font-size: 26px;
+        }
+
+        .mission p,
+        .mission li {
+            color: #56647a;
+            font-size: 14px;
+        }
+
+        .mission ul {
+            padding-left: 20px;
+        }
+
+        .mission li {
+            margin-bottom: 10px;
+        }
+
+        .closing {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .closing h2 {
+            color: #0b1c36;
+            margin-bottom: 15px;
+        }
+
+        .closing p {
+            color: #667085;
+            margin-bottom: 22px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0b1c36;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #c6a45e;
+            color: #07152b;
+        }
+
+        footer {
+            background: #07152b;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #d9b76e;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BGSoft <span>Studio</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>About <span>Us</span></h1>
+
+    <p>
+        Discover the ideas, values, and vision
+        behind BGSoft Studio.
+    </p>
+</section>
+
+<main class="container">
+
+    <section class="intro">
+
+        <div class="tagline">
+            SMART SOFTWARE. SIMPLE SOLUTIONS.
+        </div>
+
+        <h2>Who We Are</h2>
+
+        <p>
+            BGSoft Studio is a software development studio
+            focused on creating practical desktop applications
+            and digital solutions.
+        </p>
+
+        <p>
+            We believe that good software does not have
+            to be complicated. Technology should make
+            everyday tasks easier, improve productivity,
+            and provide a comfortable user experience.
+        </p>
+
+        <p>
+            Through thoughtful design, useful functionality,
+            and continuous improvement, we aim to develop
+            software that addresses real user needs.
+        </p>
+
+    </section>
+
+    <section class="values">
+
+        <article class="value-card">
+            <h3>Practical Solutions</h3>
+            <p>
+                We focus on useful applications
+                that help simplify everyday tasks.
+            </p>
+        </article>
+
+        <article class="value-card">
+            <h3>User Experience</h3>
+            <p>
+                We value intuitive interfaces,
+                accessibility, and ease of use.
+            </p>
+        </article>
+
+        <article class="value-card">
+            <h3>Quality First</h3>
+            <p>
+                We aim to deliver reliable software
+                through careful development and testing.
+            </p>
+        </article>
+
+    </section>
+
+</main>
+
+<section class="mission">
+
+    <div class="mission-inner">
+
+        <div>
+            <h2>Our Vision</h2>
+
+            <p>
+                To create useful, accessible, and reliable
+                software that makes digital tasks simpler
+                and more efficient.
+            </p>
+        </div>
+
+        <div>
+            <h2>Our Mission</h2>
+
+            <ul>
+                <li>Develop practical and functional applications.</li>
+                <li>Prioritize user convenience and experience.</li>
+                <li>Provide efficient digital solutions.</li>
+                <li>Continuously improve software quality.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="closing">
+
+    <h2>Building Simple Solutions Through Technology</h2>
+
+    <p>
+        Explore our software products and discover
+        what BGSoft Studio is developing.
+    </p>
+
+    <a href="products.html" class="button">
+        Explore Products
+    </a>
+
+</section>
+
+<footer>
+    <p>
+        © <span id="year"></span>
+        <strong>BGSoft Studio</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>Smart Software. Simple Solutions.</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
