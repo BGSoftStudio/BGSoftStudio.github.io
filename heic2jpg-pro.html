@@ -455,6 +455,89 @@
     }
 }
 
+.specifications-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.specifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.specification-card {
+    background: #f7f9fc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.specification-card h3 {
+    color: #10213d;
+    font-size: 20px;
+    margin: 0 0 22px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-row span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.spec-row strong {
+    color: #10213d;
+    font-size: 14px;
+    text-align: right;
+}
+
+.specifications-note {
+    max-width: 800px;
+    margin: 28px auto 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    .specifications-section {
+        padding: 55px 0;
+    }
+
+    .specifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specification-card {
+        padding: 20px;
+    }
+
+    .spec-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .spec-row strong {
+        text-align: left;
+    }
+}
+
+
     </style>
 </head>
 
@@ -539,6 +622,87 @@
         </p>
     </div>
 
+<section class="specifications-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">PRODUCT DETAILS</span>
+            <h2>System Requirements & Specifications</h2>
+            <p>
+                Technical information about HEIC2JPG Pro
+                and its supported environment.
+            </p>
+        </div>
+
+        <div class="specifications-grid">
+
+            <div class="specification-card">
+                <h3>Product Information</h3>
+
+                <div class="spec-row">
+                    <span>Product Name</span>
+                    <strong>HEIC2JPG Pro</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Product Type</span>
+                    <strong>Windows Desktop Application</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Primary Function</span>
+                    <strong>HEIC to JPG Conversion</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Distribution</span>
+                    <strong>Desktop Installer</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>License</span>
+                    <strong>To be announced</strong>
+                </div>
+            </div>
+
+            <div class="specification-card">
+                <h3>System Requirements</h3>
+
+                <div class="spec-row">
+                    <span>Operating System</span>
+                    <strong>Windows compatibility to be confirmed</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Processor</span>
+                    <strong>To be confirmed</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Memory (RAM)</span>
+                    <strong>To be confirmed</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Storage</span>
+                    <strong>Depends on installer size</strong>
+                </div>
+
+                <div class="spec-row">
+                    <span>Internet</span>
+                    <strong>Not yet specified</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="specifications-note">
+            Final system requirements and licensing information
+            will be published before the official release.
+        </p>
+
+    </div>
+</section>
 <section class="specifications-section">
     <div class="container">
 
